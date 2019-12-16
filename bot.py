@@ -16,11 +16,11 @@ def main():
     chat_id = data['message']['chat']['id']
     message = data['message']['text']
     hola = 'hola'
-    message_urld = BOT_URL + 'sendMessage'+ '?text=Holisima'
+    puta = json_data
 
     json_data = {
         "chat_id": chat_id,
-        "text": hola,
+        "text": puta,
    }
     
     message_url = BOT_URL + 'sendMessage'
