@@ -24,6 +24,9 @@ def main():
 if inter = message:
     message_url = BOT_URL + 'sendMessage' + '?text=Beatrice responde'
     requests.post(message_url, json=json_data)
+    
+    message_url = BOT_URL + 'sendMessage' + '?text=Beatrice responde'
+    requests.post(message_url, json=json_data)
 
     return ''
 
