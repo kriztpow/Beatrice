@@ -19,10 +19,11 @@ def main():
     json_data = {
         "chat_id": chat_id,
         "text": message,
-    }
-
-    message_url = BOT_URL + 'sendMessage' + '?text=' + message
-    #requests.post(message_url, json=json_data)
+   }
+    
+    message_urlsaludos = BOT_URL + 'sendMessage' + '?text=' + 'saludos'
+    if message_url = BOT_URL + 'sendMessage' + '?text=' + 'saludos'
+    requests.post(message_urlsaludos, json=json_data)
     
     return ''
 
