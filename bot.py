@@ -24,8 +24,8 @@ def main():
 
     message_url = BOT_URL + 'sendMessage'
     requests.post(message_url, json=json_data)
-        
-return ''
+    
+    return ''
 
 if __name__ == '__main__':  
     app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)), debug=True)
