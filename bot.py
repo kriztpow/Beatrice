@@ -22,8 +22,9 @@ def main():
         "text": message,
    }
     
-    message_url = BOT_URL + 'sendMessage'
+    
     if message == hola:
+    message_url = BOT_URL + 'sendMessage'
     requests.post(message_url, json=json_data)
     
     return ''
