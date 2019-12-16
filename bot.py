@@ -31,7 +31,7 @@ def main():
     
     message_url = BOT_URL + 'sendMessage'
     if message == bola:
-        unor = requests.post(message_url, jsond=json_datad)
+        requests.post(message_url, jsond=json_datad)
     else: 
         requests.post(message_url, json=json_data)
     
