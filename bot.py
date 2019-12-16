@@ -26,7 +26,7 @@ def main():
 
 if message is None:
         message_urldos = BOT_URL + 'sendMessage' + '?text=pija'
-        requests.post(message_url, json=json_data)
+        requests.post(message_urldos, json=json_data)
         
 return ''
 
