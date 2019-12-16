@@ -31,7 +31,7 @@ def main():
     message_url = BOT_URL + 'sendMessage'
     if message_url == message_urld:
         unor= requests.post(message_url, jsond=json_datad)
-        else dosr= requests.post(message_url, json=json_data)
+        elif dosr= requests.post(message_url, json=json_data)
     
     return ''
 
