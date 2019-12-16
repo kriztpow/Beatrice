@@ -24,9 +24,10 @@ def main():
     message_url = BOT_URL + 'sendMessage'
     requests.post(message_url, json=json_data)
 
-    return ''
 if message is None:
         message_urldos = BOT_URL + 'sendMessage' + '?text=pija'
+        
+        return ''
 
 
 
