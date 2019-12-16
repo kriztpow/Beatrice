@@ -14,7 +14,7 @@ def main():
 
     print(data)  # Comment to hide what Telegram is sending you
     chat_id = data['message']['chat']['id']
-    message = data['text']
+    message = data['message']['text']
     hola = 'mamamelabolanegra'
     message_urld = BOT_URL + 'sendMessage' + '?text=Pija'
 
@@ -28,10 +28,10 @@ def main():
         "text": hola,
    }
     
-    message_url = BOT_URL + 'sendMessage' + '?text=hola'
+    message_url = BOT_URL + 'sendMessage'
     requests.post(message_url, json=json_data)
     if message_url == message_urld:
-        requests.post(message_url, json=json_datad)
+        requests.post(message_url, jsond=json_datad)
     
     return ''
 
