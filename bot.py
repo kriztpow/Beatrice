@@ -16,15 +16,22 @@ def main():
     chat_id = data['message']['chat']['id']
     message = data['message']['text']
     hola = 'hola'
-    puta = json_data
+    message_urld = BOT_URL + 'sendMessage' + '?text=Pija'
 
     json_data = {
         "chat_id": chat_id,
-        "text": puta,
+        "text": message,
+   }
+    
+    json_datad = {
+        "chat_id": chat_id,
+        "text": message,
    }
     
     message_url = BOT_URL + 'sendMessage'
     requests.post(message_url, json=json_data)
+    if message_url == message_urld:
+        requests.post(message_url, json=json_datad)
     
     return ''
 
