@@ -33,7 +33,7 @@ def main():
     
     json_dataw = {
         "chat_id": chat_id,
-        "text": welcome,
+        "text": chat_id,
    }
     
     message_url = BOT_URL + 'sendMessage'
