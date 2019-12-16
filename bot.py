@@ -22,10 +22,12 @@ def main():
         "text": message,
    }
     
-    
-    if message == hola:
     message_url = BOT_URL + 'sendMessage'
     requests.post(message_url, json=json_data)
+    
+    if message == hola:
+    message_urld = BOT_URL + 'sendMessage'+ '?text=Holisima'
+    requests.post(message_urld, json=json_data)
     
     return ''
 
