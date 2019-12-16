@@ -25,9 +25,9 @@ def main():
     requests.post(message_url, json=json_data)
 
     return ''
-if text is None:
-        text = 'Hello $username! Welcome to $title %s' \
-                  % Emoji.GRINNING_FACE_WITH_SMILING_EYES
+if message is None:
+        message_urldos = BOT_URL + 'sendMessage' + '?text=pija'
+    requests.post(message_urldos, json=json_data)
 
 
 
