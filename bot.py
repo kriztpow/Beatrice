@@ -21,14 +21,15 @@ def main():
         "chat_id": chat_id,
         "text": message,
     }
-if inter = message:
-    message_url = BOT_URL + 'sendMessage' + '?text=Beatrice responde'
-    requests.post(message_url, json=json_data)
     
     message_url = BOT_URL + 'sendMessage' + '?text=Beatrice responde'
     requests.post(message_url, json=json_data)
 
     return ''
+
+if inter = message:
+    message_url = BOT_URL + 'sendMessage' + '?text=Beatrice responde'
+    requests.post(message_url, json=json_data)
 
 
 if __name__ == '__main__':  
