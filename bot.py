@@ -52,22 +52,7 @@ def main():
     else: 
         requests.post(message_url, json=json_data)
    #__________________________________
-  
-# Standard commands
-def start(bot, update):
-    bot.sendMessage(update.message.chat_id, text='Hi!')
-
-def help(bot, update):
-    bot.sendMessage(update.message.chat_id, text="Help!"
-
-# Catch new_chat_member
-def welcome(bot,update):
-    msg = update.message
-    chat_id = msg.chat.id
-    bot.sendMessage(update.message.chat_id, "@%s \nWelcome!" % msg.new_chat_member.username)
-
-def main():
-    # Create the Updater and pass it your bot's token.
+      # Create the Updater and pass it your bot's token.
     updater = Updater("<TOKEN>")
 
     # Get the dispatcher to register handlers
@@ -89,6 +74,20 @@ def main():
     updater.start_polling()
 
     updater.idle()
+
+# Standard commands
+def start(bot, update):
+    bot.sendMessage(update.message.chat_id, text='Hi!')
+
+def help(bot, update):
+    bot.sendMessage(update.message.chat_id, text="Help!"
+
+# Catch new_chat_member
+def welcome(bot,update):
+    msg = update.message
+    chat_id = msg.chat.id
+    bot.sendMessage(update.message.chat_id, "@%s \nWelcome!" % msg.new_chat_member.username)
+
 
    #__________________________    
     return ''
