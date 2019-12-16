@@ -5,14 +5,13 @@ from flask import Flask, request
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, messagehandler
 import logging
 
-# Enable logging
+BOT_URL = f'https://api.telegram.org/bot{os.environ["BOT_KEY"]}/'  # <-- add your telegram token as environment variable
+
+#Enable logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO)
 
 logger = logging.getLogger(__name__)
-
-
-BOT_URL = f'https://api.telegram.org/bot{os.environ["BOT_KEY"]}/'  # <-- add your telegram token as environment variable
 
 
 app = Flask(__name__)
