@@ -19,7 +19,7 @@ def main():
 
    ⚠️NOTA: Toda transacción tiene un costo del 1% del total de BANANO, NANO u otra moneda del @parjar_bot a comerciar, y ésta comisión debe pagarla el COMPRADOR en la moneda en cuestión.'''
     llamarinter = '/inter'
-    message_urld = BOT_URL + 'sendMessage' + '?text=Pija'
+    welcome = 'Bienvenid@' + '$username'
 
     json_data = {
         "chat_id": chat_id,
@@ -31,9 +31,16 @@ def main():
         "text": inter,
    }
     
+    json_dataw = {
+        "chat_id": chat_id,
+        "text": welcome,
+   }
+    
     message_url = BOT_URL + 'sendMessage'
     if message == llamarinter:
         requests.post(message_url, json=json_datad)
+    if message == llamarinter:
+        requests.post(message_url, json=json_dataw)    
     else: 
         requests.post(message_url, json=json_data)
     
