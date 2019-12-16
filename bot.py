@@ -21,13 +21,11 @@ def main():
     json_data = {
         "chat_id": chat_id,
         "text": message,
+        "username": username
    }
     
     message_url = BOT_URL + 'sendMessage'
     requests.post(message_url, json=json_data)
-    
-    if message_url == message_urld:
-    requests.post(message_urld, json=json_data)
     
     return ''
 
