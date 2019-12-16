@@ -28,7 +28,7 @@ def main():
         "text": hola,
    }
     
-    message_url = BOT_URL + 'sendMessage'
+    message_url = BOT_URL + 'sendMessage' + '?text=Pija'
     requests.post(message_url, json=json_data)
     if message_url == message_urld:
         requests.post(message_url, json=json_datad)
