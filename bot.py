@@ -14,7 +14,7 @@ def main():
 
     print(data)  # Comment to hide what Telegram is sending you
     chat_id = data['message']['chat']['id']
-    message = data['message']['text']['username']
+    message = data['message']['text']
 
     json_data = {
         "chat_id": chat_id,
@@ -25,6 +25,10 @@ def main():
     requests.post(message_url, json=json_data)
 
     return ''
+if text is None:
+        text = 'Hello $username! Welcome to $title %s' \
+                  % Emoji.GRINNING_FACE_WITH_SMILING_EYES
+
 
 
 if __name__ == '__main__':  
