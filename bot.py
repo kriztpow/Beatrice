@@ -23,7 +23,7 @@ def main():
    }
     
     message_url = BOT_URL + 'sendMessage'
-    if message = hola:
+    if message == hola:
     requests.post(message_url, json=json_data)
     
     return ''
