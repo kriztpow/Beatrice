@@ -19,7 +19,7 @@ def main():
 
    ⚠️NOTA: Toda transacción tiene un costo del 1% del total de BANANO, NANO u otra moneda del @parjar_bot a comerciar, y ésta comisión debe pagarla el COMPRADOR en la moneda en cuestión.'''
     llamarinter = '/inter'
-    welcome = 'Bienvenid@' + '$username'
+    welcome = 'Bienvenid@' + username
 
     json_data = {
         "chat_id": chat_id,
