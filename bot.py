@@ -61,9 +61,6 @@ def start(bot, update):
 def help(bot, update):
     bot.sendMessage(update.message.chat_id, text="Help!"
 
-                    
-def error(bot, update, error):
-    logger.warn('Update "%s" caused error "%s"' % (update, error))
 # Catch new_chat_member
 def welcome(bot,update):
     msg = update.message
