@@ -23,11 +23,11 @@ def main():
         "text": message,
     }
     
-    if inter = puta: 
-    message_url = BOT_URL + 'sendMessage' + '?text=Puta'
-    
     message_url = BOT_URL + 'sendMessage' + '?text=Beatrice responde'
+    message_urldos = BOT_URL + 'sendMessage' + '?text=Beatrice responde2'
     requests.post(message_url, json=json_data)
+    if message = inter:
+        requests.post(message_urldos, json=json_data)
 
     return ''
 
