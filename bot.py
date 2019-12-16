@@ -2,6 +2,16 @@ import requests
 import os
 from flask import Flask, request
 
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, messagehandler
+import logging
+
+# Enable logging
+logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                    level=logging.INFO)
+
+logger = logging.getLogger(__name__)
+
+
 BOT_URL = f'https://api.telegram.org/bot{os.environ["BOT_KEY"]}/'  # <-- add your telegram token as environment variable
 
 
@@ -41,7 +51,12 @@ def main():
     if message == llamarinter:
         requests.post(message_url, json=json_dataw)    
     else: 
-        requests.post(message_url, json=json_data)
+        requests.post(message_url, json=json_data) 
+        # Catch new_chat_member
+def welcome(bot,update):
+    msg = update.message
+    chat_id = msg.chat.id
+    bot.sendMessage(update.message.chat_id, "@%s \nWelcome!" % msg.new_chat_member.username)        
     
     return ''
 
