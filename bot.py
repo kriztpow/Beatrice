@@ -21,7 +21,7 @@ def main():
         "text": message,
    }
     
-    message_url = BOT_URL + 'sendMessage' + '?text=' + 'saludos'
+    message_url = BOT_URL + 'sendMessage' + '?text=' + message_url
     #requests.post(message_urlsaludos, json=json_data)
     
     return ''
