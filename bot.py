@@ -53,7 +53,7 @@ def main():
         requests.post(message_url, json=json_data)
    #__________________________________
       # Create the Updater and pass it your bot's token.
-    updater = Updater("<TOKEN>")
+    updater = Updater("BOT_KEY")
 
     # Get the dispatcher to register handlers
     dp = updater.dispatcher
