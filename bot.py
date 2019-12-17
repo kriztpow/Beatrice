@@ -28,16 +28,9 @@ def main():
         "text": inter,
    }
     
-    json_dataw = {
-        "chat_id": chat_id,
-        "text": chat_id,
-   }
-    
     message_url = BOT_URL + 'sendMessage'
     if message == llamarinter:
         requests.post(message_url, json=json_datad)
-    if message == llamarinter:
-        requests.post(message_url, json=json_dataw)    
     else: 
         requests.post(message_url, json=json_data)
         
