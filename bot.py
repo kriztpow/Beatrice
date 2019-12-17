@@ -83,10 +83,10 @@ def help(bot, update):
     bot.sendMessage(update.message.chat_id, text="Help!"
 
 # Catch new_chat_member
-def welcome(bot,update):
-    msg = update.message
-    chat_id = msg.chat.id
-    bot.sendMessage(update.message.chat_id, "@%s \nWelcome!" % msg.new_chat_member.username)
+#def welcome(bot,update):
+   # msg = update.message
+    #chat_id = msg.chat.id
+   # bot.sendMessage(update.message.chat_id, "@%s \nWelcome!" % msg.new_chat_member.username)
 
 
    #__________________________    
