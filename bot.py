@@ -2,20 +2,9 @@ import requests
 import os
 from flask import Flask, request
 
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, messagehandler
-import logging
-
 BOT_URL = f'https://api.telegram.org/bot{os.environ["BOT_KEY"]}/'  # <-- add your telegram token as environment variable
 
-#Enable logging
-logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-                    level=logging.INFO)
-
-logger = logging.getLogger(__name__)
-
-
 app = Flask(__name__)
-
 
 @app.route('/', methods=['POST'])
 def main():  
@@ -51,45 +40,7 @@ def main():
         requests.post(message_url, json=json_dataw)    
     else: 
         requests.post(message_url, json=json_data)
-   #__________________________________
-      # Create the Updater and pass it your bot's token.
-    updater = Updater("BOT_KEY")
-
-    # Get the dispatcher to register handlers
-    dp = updater.dispatcher
-
-    # on different commands - answer in Telegram
-    dp.add_handler(CommandHandler("start", start))
-    dp.add_handler(CommandHandler("help", help))
-
-                    
-    # Message handlers
-    dp.add_handler(MessageHandler([Filters.status_update], welcome))
-
-    # log all errors
-    dp.add_error_handler(error)
-
-                    
-    # Start the Bot
-    updater.start_polling()
-
-    updater.idle()
-
-# Standard commands
-def start(bot, update):
-    bot.sendMessage(update.message.chat_id, text='Hi!')
-
-def help(bot, update):
-    bot.sendMessage(update.message.chat_id, text="Help!"
-
-# Catch new_chat_member
-#def welcome(bot,update):
-   # msg = update.message
-    #chat_id = msg.chat.id
-   # bot.sendMessage(update.message.chat_id, "@%s \nWelcome!" % msg.new_chat_member.username)
-
-
-   #__________________________    
+        
     return ''
 
 if __name__ == '__main__':  
