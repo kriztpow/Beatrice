@@ -14,6 +14,15 @@ BOT_URL = f'https://api.telegram.org/bot{os.environ["BOT_KEY"]}/'  # <-- add you
 app = Flask(__name__)
 logger = logging.getLogger(__name__)
 
+def start(update, context):
+    update.message.reply_text(
+        "Hi! My name is Doctor Botter. I will hold a more complex conversation with you. "
+        "Why don't you tell me something about yourself?",
+        reply_markup=markup)
+
+    return CHOOSING
+
+
 @app.route('/', methods=['POST'])
 def main():  
     data = request.json
