@@ -2,14 +2,12 @@ import requests
 import os
 from flask import Flask, request
 import logging
+logging.basicConfig(level=logging.DEBUG,
+                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
 
-from telegram import (LabeledPrice, ShippingOption)
-from telegram.ext import (Updater, CommandHandler, MessageHandler,
-                          Filters, PreCheckoutQueryHandler, ShippingQueryHandler)
-
-# Enable logging
-logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-                    level=logging.INFO)
+logger.setLevel(logging.DEBUG)
 
 BOT_URL = f'https://api.telegram.org/bot{os.environ["BOT_KEY"]}/'  # <-- add your telegram token as environment variable
 
