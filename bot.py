@@ -1,10 +1,20 @@
 import requests  
 import os
 from flask import Flask, request
+import logging
+
+from telegram import (LabeledPrice, ShippingOption)
+from telegram.ext import (Updater, CommandHandler, MessageHandler,
+                          Filters, PreCheckoutQueryHandler, ShippingQueryHandler)
+
+# Enable logging
+logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                    level=logging.INFO)
 
 BOT_URL = f'https://api.telegram.org/bot{os.environ["BOT_KEY"]}/'  # <-- add your telegram token as environment variable
 
 app = Flask(__name__)
+logger = logging.getLogger(__name__)
 
 @app.route('/', methods=['POST'])
 def main():  
@@ -13,8 +23,8 @@ def main():
     print(data)  # Comment to hide what Telegram is sending you
     chat_id = data['message']['chat']['id']
     message = data['message']['text']
-    chat = data['id']
-    inter = '''Hola''' + chat + ''', para tu comercio, asegúrate de que el @InterBanex esté disponible, antes de tipear tus monedas.
+    chat_ids = update.message.chat_id
+    inter = '''Hola''' + chat_ids + ''', para tu comercio, asegúrate de que el @InterBanex esté disponible, antes de tipear tus monedas.
 
    ⚠️NOTA: Toda transacción tiene un costo del 1% del total de BANANO, NANO u otra moneda del @parjar_bot a comerciar, y ésta comisión debe pagarla el COMPRADOR en la moneda en cuestión.'''
     llamarinter = '/inter'
