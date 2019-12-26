@@ -20,8 +20,8 @@ def main():
     llamarinter = '/inter'
 
 
-#resp = requests.get('https://s3.amazonaws.com/dolartoday/data.json')
-#json.loads(resp.content)
+resp = requests.get('https://s3.amazonaws.com/dolartoday/data.json')
+json.loads(resp.content)
 
     json_data = {
         "chat_id": chat_id,
@@ -35,7 +35,7 @@ def main():
     
     message_url = BOT_URL + 'sendMessage'
     if message == llamarinter:
-        requests.post(message_url, json=json_datad)
+        requests.post(message_url, json=json_datad, resp)
     else: 
         requests.post(message_url, json=json_data)
         
