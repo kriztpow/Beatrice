@@ -41,7 +41,7 @@ resp = requests.get('https://s3.amazonaws.com/dolartoday/data.json')
 json.loads(resp.content)
 
     resp = {
-       "USD": "cencoex",
+       "USD": cencoex,
     }
     
 
