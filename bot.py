@@ -13,6 +13,7 @@ def main():
     print(data)  # Comment to hide what Telegram is sending you
     chat_id = data['message']['chat']['id']
     message = data['message']['text']
+    pipe = data['first_name']['text']
     chat_ids = '😂'
     inter = '''Hola''' + chat_ids + ''', para tu comercio, asegúrate de que el @InterBanex esté disponible, antes de tipear tus monedas.
 
