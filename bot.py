@@ -38,7 +38,7 @@ def main():
 
 
 #resp = requests.get('https://s3.amazonaws.com/dolartoday/data.json')
-json.loads(resp.content)
+#json.loads(resp.content)
 
     json_data = {
         "chat_id": chat_id,
