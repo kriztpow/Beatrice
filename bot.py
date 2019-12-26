@@ -40,15 +40,6 @@ def main():
 resp = requests.get('https://s3.amazonaws.com/dolartoday/data.json')
 json.loads(resp.content)
 
-    print(data)
-    USD = data['cencoex']
-
-    resp = {
-       "USD": cencoex,
-    }
-    
-
-
     json_data = {
         "chat_id": chat_id,
         "text": message,
