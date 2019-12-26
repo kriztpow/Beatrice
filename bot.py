@@ -36,6 +36,16 @@ def main():
    ⚠️NOTA: Toda transacción tiene un costo del 1% del total de BANANO, NANO u otra moneda del @parjar_bot a comerciar, y ésta comisión debe pagarla el COMPRADOR en la moneda en cuestión.'''
     llamarinter = '/inter'
 
+
+resp = requests.get('https://s3.amazonaws.com/dolartoday/data.json')
+json.loads(resp.content)
+
+    resp = {
+       "USD": "cencoex",
+    }
+    
+
+
     json_data = {
         "chat_id": chat_id,
         "text": message,
@@ -48,7 +58,7 @@ def main():
     
     message_url = BOT_URL + 'sendMessage'
     if message == llamarinter:
-        requests.post(message_url, json=json_datad)
+        requests.post(message_url, json=json_datad, resp)
     else: 
         requests.post(message_url, json=json_data)
         
