@@ -13,6 +13,7 @@ def main():
     print(data)  # Comment to hide what Telegram is sending you
     chat_id = data['message']['chat']['id']
     message = data['message']['text']
+    firstname = data['message']['chat']['first_name']
     inter = f'{os.environ["POSTINTER"]}'
     llamarinter = '/inter'
 
