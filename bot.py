@@ -13,10 +13,7 @@ def main():
     print(data)  # Comment to hide what Telegram is sending you
     chat_id = data['message']['chat']['id']
     message = data['message']['text']
-    chat_ids = '😂'
-    inter = '''Hola''' + chat_ids + ''', para tu comercio, asegúrate de que el @InterBanex esté disponible, antes de tipear tus monedas.
-
-   ⚠️NOTA: Toda transacción tiene un costo del 1% del total de BANANO, NANO u otra moneda del @parjar_bot a comerciar, y ésta comisión debe pagarla el COMPRADOR en la moneda en cuestión.'''
+    inter = ["POSTINTER"]
     llamarinter = '/inter'
 
     json_data = {
