@@ -14,7 +14,7 @@ def main():
     chat_id = data['message']['chat']['id']
     message = data['message']['text']
     firstname = data['message']['chat']['first_name']
-    inter = f'{os.environ["POSTINTER"]}'
+    inter = f'firstname{os.environ["POSTINTER"]}'
     llamarinter = '/inter'
 
     json_data = {
@@ -24,7 +24,6 @@ def main():
     
     json_datad = {
         "chat_id": chat_id,
-        "text": firstname,
         "text": inter,
    }
     
