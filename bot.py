@@ -24,7 +24,7 @@ def main():
     
     json_datad = {
         "chat_id": chat_id,
-        "text": firstname,
+        "text": firstname, inter,
    }
     
     message_url = BOT_URL + 'sendMessage'
