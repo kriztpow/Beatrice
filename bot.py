@@ -36,7 +36,7 @@ def main():
     message_url = BOT_URL + 'sendMessage'
     if message == llamarinter:
         requests.post(message_url, json=json_datad)
-        if message is None:
+        if text is None:
             requests.post(message_url, json=json_datau) 
         
     return ''
