@@ -14,6 +14,7 @@ def main():
     chat_id = data['message']['chat']['id']
     message = data['message']['text']
     firstname = data['message']['chat']['first_name']
+    username = data['message']['chat']['username']
     inter = 'Hola ' + firstname + ' ' + f'{os.environ["POSTINTER"]}'
     llamarinter = '/inter'
 
@@ -27,9 +28,16 @@ def main():
         "text": inter,
    }
     
+    json_datau = {
+        "chat_id": chat_id,
+        "text": username,
+   }
+    
     message_url = BOT_URL + 'sendMessage'
     if message == llamarinter:
         requests.post(message_url, json=json_datad)
+        if message is None:
+            requests.post(message_url, json=json_datau)
     else: 
         requests.post(message_url, json=json_data)
         
