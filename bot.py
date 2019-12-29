@@ -37,9 +37,7 @@ def main():
     if message == llamarinter:
         requests.post(message_url, json=json_datad)
         if message is None:
-            requests.post(message_url, json=json_datau)
-    else: 
-        requests.post(message_url, json=json_data)
+            requests.post(message_url, json=json_datau) 
         
     return ''
 
