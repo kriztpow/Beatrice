@@ -38,6 +38,7 @@ def main():
         requests.post(message_url, json=json_datad)
         if text is None:
             requests.post(message_url, json=json_datau) 
+    else:
         
     return ''
 
